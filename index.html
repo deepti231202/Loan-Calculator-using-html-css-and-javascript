@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Calculator</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div class="loan_calculator">
+        <h1>Loan Calculator</h1>
+        <p>Loan amount: 
+           <input type="number" id="amount" placeholder="Enter amount..">
+        </p>
+        <p>Rate (Interest): 
+           <input type="number" step="0.1" id="rate" placeholder="Enter rate..">
+        </p>
+        <p>Months (Time):
+           <input type="number" id="time" placeholder="Enter time..">
+        </p>
+        <input type="button" value="Calculate" id="calculate_op">
+        <p>Total EMI: 
+           <span style="font-weight: bold; color: black;" id="output"></span>
+        </p>
+     </div>
+     <script>
+        function calculate() {
+            const amount = parseFloat(document.getElementById('amount').value);
+            const rate = parseFloat(document.getElementById('rate').value);
+            const time = parseInt(document.getElementById('time').value);
+
+            if (isNaN(amount) || isNaN(rate) || isNaN(time) || amount <= 0 || rate <= 0 || time <= 0) {
+                alert("Please enter valid positive numbers for all fields.");
+                return;
+            }
+
+            const interest = (amount * (rate * 0.01)) / time;
+            let emi = ((amount / time) + interest).toFixed(2);
+
+            emi = emi.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            document.getElementById("output").innerHTML = emi;
+        }
+
+        document.getElementById("calculate_op").addEventListener("click", calculate);
+     </script>
+</body>
+</html>

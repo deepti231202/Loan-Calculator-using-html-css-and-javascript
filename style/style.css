@@ -1,0 +1,58 @@
+
+
+   body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      /* display: flex; */
+      margin: 50px 150px 80px 80px;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 450px;
+      /* margin: 0; */
+  }
+  
+  .loan_calculator {
+      background-color: rgb(203, 248, 248);
+      color: rgb(28, 73, 73);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .loan_calculator h1 {
+      margin-bottom: 20px;
+  }
+  
+  .loan_calculator p {
+      margin: 10px 0;
+  }
+  
+  .loan_calculator input[type="number"] {
+      padding: 5px;
+      border: none;
+      border-radius: 5px;
+      width: 180px;
+      margin-left: 10px;
+  }
+  
+  .loan_calculator input[type="button"] {
+      padding: 10px 15px;
+      border: none;
+      background-color:rgb(74, 169, 169);
+      margin-left: 110px;
+      color: rgb(28, 73, 73);
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 15px;
+  }
+  
+  .loan_calculator input[type="button"]:hover {
+      background-color: rgb(108, 223, 223);
+  }
+  
+  #output {
+      font-size: 1.2em;
+      margin-top: 10px;
+  }
+  
